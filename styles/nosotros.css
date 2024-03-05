@@ -1,0 +1,62 @@
+#contenedor-nosotros {
+    position: relative;
+    height: 100vh;
+}
+
+.contenedor-contenido {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.caja-contenido {
+    /* width: 75%; */
+    /* height: 60%; */
+    /* border: 1px solid rgba(255, 255, 255, .25); */
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    padding: 5rem;
+}
+
+.contenedores-fondo {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/contenedores-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    pointer-events: none;
+    clip-path: polygon(0 0, 44% 0, 92% 100%, 0% 100%);
+}
+
+.filtro-background-nosotros {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(255,255,255);
+    background: linear-gradient(192deg, rgba(255,255,255,.4) 31%, rgba(238,238,238,.4) 61%, rgba(227,227,227,.4) 91%);
+    backdrop-filter: blur(0px); */
+    background: rgb(100,100,100);
+    background: linear-gradient(180deg, rgba(35,35,35,0.85) 12%, rgba(30,30,30,.85) 29%, rgba(25,25,25,.8) 46%, rgba(20,20,20,.8) 61%, rgba(15,15,15,.8) 76%, rgba(0,0,0,.8) 91%);
+    backdrop-filter: blur(3px);
+}
+
+@media (min-width: 650px) {
+    .contenedores-fondo {
+        width: 50%;
+    }
+
+    .filtro-background-nosotros {
+        backdrop-filter: blur(8px);
+    }
+}

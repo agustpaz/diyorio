@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+
+body {
+  position: relative;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* GLOBALS*/
+
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+.texto-chico {
+  font-size: 1.5rem !important;
+}
+
+.filtro {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, .65);
+  position: absolute;
+  padding: 120px 24px 160px 24px;
+  z-index: 50;
+}
+
+.gradiente {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 40%
+    ),
+    radial-gradient(at 97% 21%, rgb(114, 235, 254) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, #BDC2A0 0px, transparent 100%),
+    radial-gradient(at 1% 27%, #7f977d 0px, transparent 80%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, #314546 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/assets/images/mar-barco.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 120px 40px 160px 40px;
+  pointer-events: none;
+  z-index: 100;
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.text-sm {
+  font-size: .85rem
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.separador-texto {
+  width: 30%;
+  height: 2px;
+  border-radius: 10px;
+}
+
+.app {
+  z-index: 200;
+}
+
+#navigation {
+  width: 100%;
+  z-index: 1000;
+  transition: all .5 ease;
+}
+
+.gradiente-nav {
+  background-color: rgba(0, 0, 0, .9) !important;
+  transition: all .5 ease;
+}
+
+.logo {
+  width: 50px;
+  transition: all .2s ease
+}
+
+@media (min-width: 650px) {
+  .logo {
+    width: 110px;
+  }
+}
+
+.logo-chico {
+  width: 50px;
+  transition: all .2s ease;
+}
+
+.autotype {
+  overflow: hidden; /* Para ocultar el desbordamiento de texto */
+  white-space: nowrap; /* Evita el salto de línea */
+  border-right: 2px solid transparent; /* Línea simulada de escritura */
+  animation: autotype 3s steps(40) infinite, blink 1s infinite; /* Animaciones */
+}
+
+@keyframes autotype {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+.text-shadow-titulo {
+  text-shadow: 5px 3px 0px #9A9E84;
+}
+
+.text-shadow-titulo-resaltado {
+  text-shadow: none;
+}
+
+
+#separador-servicios {
+  background-image: url("/assets/images/separador-imagen.jpg");
+  background-position: 50% 40%;
+  background-attachment: fixed;
+  color: #7ca596;
+}
+
+/* POPUP */
+
+#popup {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 89, 110, 0.8);
+}
+#popup .ventana {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 3rem;
+  background-color: #7d99ca;
+  border-radius: 4px;
+}
+#popup .ventana h3 {
+  color: rgb(230, 230, 230);
+  margin: 0px 0px 2rem 0px;
+  text-align: center;
+}
+#popup .ventana button {
+  padding: 1.2rem;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  border-radius: 2px;
+  color: #4d596e;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 2rem;
+}
+#popup .ventana button:hover {
+  color: #4d596e;
+  background-color: #d7d7d7;
+}
+
+/* CARDS */
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  height: 400px;
+  padding: 35px;
+  /* border: 1px solid rgba(255, 255, 255, .25); */
+  /* border-radius: 20px; */
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: 1.03;
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+  transition: transform 0.3s;
+}
+
+.card:hover .card-content {
+  transform: translateY(-100%);
+}
+
+.card-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+
+.card:hover .card-description {
+  transform: translateY(0);
+}
+
+.card:hover .card-content {
+  filter: blur(5px);
+}
+
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[280px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-xl hover:text-gray-500 font-normal;
+}

@@ -1,0 +1,9 @@
+.background-footer {
+    background: rgb(227,227,227);
+    background: linear-gradient(168deg, rgba(227,227,227,0.4) 8%, rgba(226,226,226,0.4) 51%, rgba(255,255,255,0.4) 91%);
+    backdrop-filter: blur(4px);
+}
+
+svg {
+    fill: #7f9fb0;
+}
