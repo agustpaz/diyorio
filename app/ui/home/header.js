@@ -144,13 +144,13 @@ const Header = () => {
             {currentPage == "/" ? (
             <>
             <Link 
-                href="#nosotros"
+                href="#quienes-somos"
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 p-4 py-10 scroll-link"
             >
                 Nosotros
             </Link>
             <Link 
-                href="#empresas"
+                href="#nuestros-clientes"
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 p-4 py-10 scroll-link"
             >
                 Nuestros Clientes
