@@ -14,19 +14,19 @@ import goodfish from "@/public/assets/images/marcas-logos/good-fish.png";
 
 const MarcasCarousel = () => {
 
-  useEffect(() =>{
-    contarMarcas();
-  });
+  // useEffect(() =>{
+  //   contarMarcas();
+  // });
 
-  const contarMarcas = () => {
-    const marcas = document.querySelector('#slider-marcas-1'),
-    total_marcas = marcas.children.length;
+  // const contarMarcas = () => {
+  //   const marcas = document.querySelector('#slider-marcas-1'),
+  //   total_marcas = marcas.children.length;
     
-    document.documentElement.style.setProperty('--total-brand', total_marcas);
-    for(let i = 0; i < total_marcas; i++) {
-      marcas.appendChild(marcas.children[i].cloneNode(true));
-    }
-  }
+  //   document.documentElement.style.setProperty('--total-brand', total_marcas);
+  //   for(let i = 0; i < total_marcas; i++) {
+  //     marcas.appendChild(marcas.children[i].cloneNode(true));
+  //   }
+  // }
 
   const mouseEnter = (e) => {
     let slider = document.getElementById(e.target.dataset.slider);

@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect } from 'react'
+
 import Header from './ui/home/header'
 import Despachantes from './ui/home/despachantes'
 import MarcasCarousel from './ui/home/marcas-carousel'
@@ -7,6 +11,23 @@ import Mapa from './ui/home/mapa'
 import Footer from './ui/home/footer'
 
 export default function Home() {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Solo inicializa Wow.js en el navegador
+      const WOW = require('wowjs');
+      const wow = new WOW.WOW({
+        live: false
+      });
+      wow.init();
+
+      wow.sync();
+
+      console.log(wow);
+    }
+
+  },[]);
+
   return (
     <>
       <Header />

@@ -89,7 +89,7 @@ h4 {
   opacity: .3;
 }
 
-.main {
+#main {
   width: 100%;
   min-height: 100vh;
   background-image: url('/assets/images/mar-barco.jpg');
@@ -100,11 +100,16 @@ h4 {
   padding: 120px 40px 160px 40px;
   pointer-events: none;
   z-index: 100;
-  filter: blur(2px);
+  filter: blur(0px);
+  transition: scale 40s ease;
+}
+
+.escalar {
+  scale: 1.6;
 }
 
 @media screen and (max-width: 640px) {
-  .main {
+  #main {
     padding: 0;
   }
 }
@@ -146,7 +151,7 @@ h4 {
 
 .logo {
   width: 50px;
-  transition: all .2s ease
+  transition: all .5s ease
 }
 
 @media (min-width: 650px) {
@@ -157,7 +162,7 @@ h4 {
 
 .logo-chico {
   width: 50px;
-  transition: all .2s ease;
+  transition: all .5s ease;
 }
 
 .autotype {

@@ -48,6 +48,7 @@ module.exports = {
         "azul-300": "#214F7A",
         "azul-400": "#0D3B66",
         "azul-cruzdelsur": "#7f9fb0",
+        "azul-cruzdelsur-100": "#89A9BA",
         "turquesa-100": "#009fe7",
         "turquesa-200": "#009fe7",
         "turquesa-300": "#007ab1",

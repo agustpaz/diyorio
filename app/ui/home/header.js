@@ -23,6 +23,7 @@ const Header = () => {
       const nav = document.querySelector('#navigation');
       const logo = document.querySelector('#imagen-logo');
       const navLinks = document.querySelectorAll("#navigation a");
+      const main = document.getElementById("main");
     
       if(currentPage == "/") {
         const handleScroll = () => {
@@ -59,6 +60,10 @@ const Header = () => {
               }
           });
       });
+
+      setTimeout(() => {
+        main.classList.add("escalar")
+      }, 500)
     }
   });
 
@@ -77,12 +82,12 @@ const Header = () => {
   }
 
   return (
-  <header className="w-full relative">
+  <header className="w-full relative overflow-hidden">
     {currentPage == "/" ? (
         <>
         <div className="filtro">
             <div className="flex items-center gap-28 justify-center mt-48">
-                <div className="font-bold tracking-widest wow fadeIn">
+                <div className="font-bold tracking-widest wow fadeInUp">
                   <div className={noto.className}>
                     <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">Nos hacemos cargo</h2>
                     <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold mb-12 text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">de tus pedidos</h2>
@@ -103,33 +108,25 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div>
-                  <Image
-                    src={logoDiyorio}
-                    alt="Promptopia Logo"
-                    className="object-contain my-3 animated"
-                    width={350}
-                    height={500}
-                  />
-                </div> */}
             </div>
         </div>
-        <div className="main">
+        <div id="main">
             
         </div></> ) : (
             <></>
         )
     }
-    <nav id="navigation" className={`flex items-center text-2xl font-normal tracking-wide justify-around py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"}`}>
-        <Link href="/" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter`} >
+    <nav id="navigation" className={`flex items-center justify-around text-2xl py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"}`}>
+        <Link href="/" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter transition-all ease-in-out duration-500`} >
             <Image
                 id="imagen-logo"
                 src={logoDiyorio}
                 alt="Promptopia Logo"
                 className={`object-contain my-3 logo animated ${currentPage.includes("/articulo") ? "logo-chico" : ""}`}
                 width={110}
+                priority
             />
-            I YORIO
+            <span className="">I YORIO</span>
         </Link>
 
 
@@ -137,25 +134,24 @@ const Header = () => {
           <div className="flex gap-3 md:gap-5">
             <Link 
                 href="/"
-                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 p-4 py-10 "
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 "
             >
                 Inicio
             </Link>
-            {currentPage == "/" ? (
-            <>
+
             <Link 
-                href="#quienes-somos"
-                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 p-4 py-10 scroll-link"
+                href={currentPage == "/" ? "#quienes-somos" : "/#quienes-somos"}
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
                 Nosotros
             </Link>
+            
             <Link 
-                href="#nuestros-clientes"
-                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 p-4 py-10 scroll-link"
+                href={currentPage == "/" ? "#nuestros-clientes" : "/#nuestros-clientes"}
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
                 Nuestros Clientes
-            </Link></>) : <></>
-            }
+            </Link>
           </div>
         </div>
 
@@ -177,23 +173,23 @@ const Header = () => {
                         >
                             Inicio
                         </Link>
-                        {currentPage == "/" ? (
-                        <>
+
                         <Link 
-                            href="#quienes-somos"
+                            href={currentPage == "/" ? "#quienes-somos" : "/#quienes-somos"}
                             className="dropdown_link text-black"
                             onClick={() => setToggleDropdown(false)}
                         >
                             Nosotros
                         </Link>
+
                         <Link 
-                            href="#nuestros-clientes"
+                            href={currentPage == "/" ? "#nuestros-clientes" : "/#nuestros-clientes"}
                             className="dropdown_link text-black"
                             onClick={() => setToggleDropdown(false)}
                         >
                             Nuestros Clientes
-                        </Link> </> ) : <></>
-                        }
+                        </Link>
+                        
                         <Link 
                             href="/contacto"
                             target="blank"

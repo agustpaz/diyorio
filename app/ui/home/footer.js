@@ -3,12 +3,16 @@
 import React from 'react'
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 
 import "@/styles/footer.css";
 
 const Footer = () => {
+
+  const currentPage = usePathname();
+
   return (
-    <section className='pt-20 bg-azul-100 background-footer'>
+    <footer className='pt-20 bg-azul-100 background-footer'>
       <div className='sm:w-2/3 md:w-1/2 mx-auto px-8 sm:px-0 flex justify-between text-azul-cruzdelsur'>
         <div className='w-12 sm:w-16 ease-in duration-100 hover:scale-110'>
           <Link href="https://instagram.com" target='blank'>
@@ -40,10 +44,34 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className='bg-azul-cruzdelsur mt-20 p-10'>
-        <p className="text-center text-white">Copyright © 2023 | Todos los derechos reservados | Aviso legal</p>
+      <div className='mt-20'>
+        <div className="flex justify-center gap-8 bg-azul-cruzdelsur-100 py-10">
+          <Link 
+              href="/"
+              className="hover:shadow-xl hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 text-center text-white px-10 py-4"
+          >
+              Inicio
+          </Link>
+
+          <Link 
+              href={currentPage == "/" ? "#quienes-somos" : "/#quienes-somos"}
+              className="hover:shadow-xl hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 text-center text-white px-10 py-4"
+          >
+              Nosotros
+          </Link>
+          
+          <Link 
+              href={currentPage == "/" ? "#nuestros-clientes" : "/#nuestros-clientes"}
+              className="hover:shadow-xl hover:bg-azul-cruzdelsur transition-all ease-in-out duration-200 text-center text-white px-10 py-4"
+          >
+              Nuestros Clientes
+          </Link>
+        </div>
+        <div className='bg-azul-cruzdelsur py-4'>
+          <p className="text-center text-white">Copyright © 2023 | Todos los derechos reservados | Aviso legal</p>
+        </div>
       </div>
-    </section>
+    </footer>
   )
 }
 

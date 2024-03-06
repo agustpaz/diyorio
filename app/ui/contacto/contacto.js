@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Popup from './popup.js';
 import Spinner from "../spinner.js";
