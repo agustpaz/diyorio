@@ -41,8 +41,8 @@ const MarcasCarousel = () => {
 
   return (
     <section id="nuestros-clientes" className={`py-20 carousel-background`}>
-        <h1 className='text-center text-5xl font-bold mb-20'>Nuestros Clientes <div className='separador-texto bg-verde-400 m-auto w-48 h-2'></div></h1>
-        <div className='slider'>
+        <h1 className='text-center text-5xl font-bold mb-20 wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">Nuestros Clientes <div className='separador-texto bg-verde-400 m-auto w-48 h-2'></div></h1>
+        <div className='slider wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.8s">
           <ul id='slider-marcas-1' className='brands'>
             <li className='brand-logo bg-blue-200 p-2 rounded'><Image src={moscuzza} alt='Moscuzza'/></li>
             <li className='brand-logo'>Pesquera Mar Chiquita S.A</li>

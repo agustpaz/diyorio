@@ -149,6 +149,10 @@ h4 {
   transition: all .5 ease;
 }
 
+#logo-entero {
+  transition: all .8s ease-out;
+}
+
 .logo {
   width: 75px;
   transition: all .5s ease
@@ -169,6 +173,10 @@ h4 {
   .logo-chico {
     width: 50px;
   }
+}
+
+.trasladar-logo {
+  translate: -40px;
 }
 
 .autotype {

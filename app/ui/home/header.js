@@ -24,16 +24,19 @@ const Header = () => {
       const logo = document.querySelector('#imagen-logo');
       const navLinks = document.querySelectorAll("#navigation a");
       const main = document.getElementById("main");
+      const logoEntero = document.getElementById("logo-entero");
     
       if(currentPage == "/") {
         const handleScroll = () => {
             if (window.scrollY > 150) {
                 logo.classList.add('logo-chico');
                 nav.classList.add('gradiente-nav');
+                logoEntero.classList.add('trasladar-logo');
                 cambiarFontSizes(true, navLinks);
             } else {
                 logo.classList.remove('logo-chico');
                 nav.classList.remove('gradiente-nav');
+                logoEntero.classList.remove('trasladar-logo');
                 cambiarFontSizes(false, navLinks);
             }
         };
@@ -116,8 +119,8 @@ const Header = () => {
             <></>
         )
     }
-    <nav id="navigation" className={`flex items-center justify-around text-2xl py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"}`}>
-        <Link href="/" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter transition-all ease-in-out duration-500`} >
+    <nav id="navigation" className={`flex items-center justify-around text-2xl py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"} wow fadeInDown`}>
+        <Link href="/" id="logo-entero" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter transition-all ease-in-out duration-500`} >
             <Image
                 id="imagen-logo"
                 src={logoDiyorio}
@@ -126,7 +129,7 @@ const Header = () => {
                 width={110}
                 priority
             />
-            <span className="">I YORIO</span>
+            <span>I YORIO</span>
         </Link>
 
 
@@ -151,6 +154,13 @@ const Header = () => {
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
                 Nuestros Clientes
+            </Link>
+
+            <Link 
+                href={currentPage == "/" ? "#despachantes-servicios" : "/#despachantes-servicios"}
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
+            >
+                Servicios
             </Link>
           </div>
         </div>
@@ -188,6 +198,13 @@ const Header = () => {
                             onClick={() => setToggleDropdown(false)}
                         >
                             Nuestros Clientes
+                        </Link>
+
+                        <Link 
+                            href={currentPage == "/" ? "#despachantes-servicios" : "/#despachantes-servicios"}
+                            className="dropdown_link text-black"
+                        >
+                            Servicios
                         </Link>
                         
                         <Link 

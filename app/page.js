@@ -10,6 +10,9 @@ import QuienesSomos from './ui/home/quienes-somos.js'
 import Mapa from './ui/home/mapa'
 import Footer from './ui/home/footer'
 
+import "@/styles/animate.css";
+import "@/styles/animate.min.css";
+
 export default function Home() {
 
   useEffect(() => {

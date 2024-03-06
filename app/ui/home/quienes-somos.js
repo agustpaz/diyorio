@@ -5,7 +5,7 @@ import homeStyles from "./home.module.css"
 const QuienesSomos = () => {
   return (
     <section id='quienes-somos' className={`sm:grid sm:grid-cols-2`}>
-        <div className='p-10 py-20 sm:p-28 flex flex-col items-center'>
+        <div className='p-10 py-20 sm:p-28 flex flex-col items-center wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">
             <h1 className={`text-4xl sm:text-6xl tracking-wide text-black font-semibold text-center`}>Quienes somos</h1>
             <div className='separador-texto bg-verde-400 w-1/4 mx-auto mt-3 h-1'></div>
             <div className='mt-16'>
@@ -19,7 +19,7 @@ const QuienesSomos = () => {
         </div>
         <div className={`w-full h-full ${homeStyles.imagen_puerto}`}></div>
         <div className={`hidden sm:block w-full h-full ${homeStyles.imagen_puerto}`}></div>
-        <div className='p-10 py-20 sm:p-28 flex flex-col items-center'>
+        <div className='p-10 py-20 sm:p-28 flex flex-col items-center wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">
             {/* <h1 className={`text-6xl tracking-wide text-black font-semibold text-center`}>Que te ofrecemos</h1>
             <div className='separador-texto bg-verde-400 w-1/4 mx-auto mt-3 h-1'></div> */}
             <div>
