@@ -161,8 +161,14 @@ h4 {
 }
 
 .logo-chico {
-  width: 50px;
+  width: 75px;
   transition: all .5s ease;
+}
+
+@media (min-width: 650px) {
+  .logo-chico {
+    width: 50px;
+  }
 }
 
 .autotype {
