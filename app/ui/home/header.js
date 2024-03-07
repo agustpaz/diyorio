@@ -32,11 +32,13 @@ const Header = () => {
                 logo.classList.add('logo-chico');
                 nav.classList.add('gradiente-nav');
                 logoEntero.classList.add('trasladar-logo');
+                logoEntero.classList.add('texto-chico-logo');
                 cambiarFontSizes(true, navLinks);
             } else {
                 logo.classList.remove('logo-chico');
                 nav.classList.remove('gradiente-nav');
                 logoEntero.classList.remove('trasladar-logo');
+                logoEntero.classList.remove('texto-chico-logo');
                 cambiarFontSizes(false, navLinks);
             }
         };
@@ -74,11 +76,15 @@ const Header = () => {
 
       if(add == true) {
           navLinks.forEach((link) => {
+            if(link.id != "logo-entero") {
               link.classList.add("texto-chico");
+            }
           });
       } else {
           navLinks.forEach((link) => {
+            if(link.id != "logo-entero") {
               link.classList.remove("texto-chico");
+            }
           });
       }
 

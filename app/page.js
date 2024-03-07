@@ -25,8 +25,6 @@ export default function Home() {
       wow.init();
 
       wow.sync();
-
-      console.log(wow);
     }
 
   },[]);

@@ -54,6 +54,10 @@ h4 {
   font-size: 2.8rem;
 }
 
+.texto-chico-logo {
+  font-size: 2rem !important;
+}
+
 .texto-chico {
   font-size: 1.5rem !important;
 }
