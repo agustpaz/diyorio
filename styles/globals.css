@@ -101,7 +101,7 @@ h4 {
   pointer-events: none;
   z-index: 100;
   filter: blur(0px);
-  transition: scale 40s ease;
+  transition: scale 30s ease;
 }
 
 .escalar {
