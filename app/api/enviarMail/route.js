@@ -27,9 +27,6 @@ export async function POST(request) {
                     <h3>Email:</h3><p ${estilosParrafos}>${email}</p>
                     <h3>Mensaje:</h3><p ${estilosParrafos}>${mensaje}</p>`
         }
-
-        console.log(mailOption);
-        console.log(process.env.GOOGLE_MAPS_API_KEY);
     
         await transporter.sendMail(mailOption);
     

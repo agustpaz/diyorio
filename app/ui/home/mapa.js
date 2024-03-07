@@ -11,7 +11,7 @@ import "@/styles/mapa.css";
 
 const Mapa = () => {
   return (
-    <section className='pt-20 pb-24 px-10 sm:p-16 sm:pb-24 relative'>
+    <section className='pt-20 pb-24 px-10 sm:p-16 sm:pb-36 relative'>
         <div className='lg:grid lg:grid-cols-2 gap-x-10 wow fadeInRight'>
             <div className='sm:px-24 sm:py-48 sm:shadow-2xl'>
                 <h1 className='text-5xl text-5xl xl:text-6xl font-semibold'>Donde encontrarnos</h1>
