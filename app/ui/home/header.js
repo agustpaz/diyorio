@@ -14,7 +14,7 @@ import 'animate.css/animate.min.css';
 import homeStyles from "./home.module.css";
 import { noto } from "@/app/fonts";
 
-const Header = () => {
+const Header = ({scrollToElement}) => {
 
   const currentPage = usePathname();
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -122,7 +122,7 @@ const Header = () => {
         <div id="main">
             
         </div></> ) : (
-            <></>
+            null
         )
     }
     <nav id="navigation" className={`flex items-center justify-around text-2xl py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"} wow fadeInDown`}>
@@ -148,26 +148,56 @@ const Header = () => {
                 Inicio
             </Link>
 
+            {currentPage === "/" ? (
             <Link 
-                href={currentPage == "/" ? "#quienes-somos" : "/#quienes-somos"}
+                onClick={() => scrollToElement('quienes-somos')}
+                href={""}
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
                 Nosotros
             </Link>
-            
+            ) : (
             <Link 
-                href={currentPage == "/" ? "#nuestros-clientes" : "/#nuestros-clientes"}
+                href="/#quienes-somos"
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
-                Nuestros Clientes
+                Nosotros
             </Link>
+            )}
 
+            {currentPage === "/" ? (
             <Link 
-                href={currentPage == "/" ? "#despachantes-servicios" : "/#despachantes-servicios"}
+                onClick={() => scrollToElement('despachantes-servicios')}
+                href={""}
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
                 Servicios
             </Link>
+            ) : (
+            <Link 
+                href="/#despachantes-servicios"
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
+            >
+                Servicios
+            </Link>
+            )}
+            
+            {currentPage === "/" ? (
+            <Link 
+                onClick={() => scrollToElement('nuestros-clientes')}
+                href={""}
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
+            >
+                Nuestros Clientes
+            </Link>
+            ) : (
+            <Link 
+                href="/#nuestros-clientes"
+                className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
+            >
+                Nuestros Clientes
+            </Link>
+            )}
           </div>
         </div>
 

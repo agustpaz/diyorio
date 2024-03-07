@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 import Header from './ui/home/header'
 import Despachantes from './ui/home/despachantes'
@@ -14,6 +14,7 @@ import "@/styles/animate.css";
 import "@/styles/animate.min.css";
 
 export default function Home() {
+
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -29,13 +30,25 @@ export default function Home() {
 
   },[]);
 
+  const scrollToElement = (elementId) => {
+    console.log(elementId)
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      console.log(elementPosition);
+      window.scrollTo({
+        top: elementPosition - 112,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
-      <Header />
+      <Header scrollToElement={scrollToElement} />
       <Nosotros />
       <QuienesSomos />
       <Despachantes />
-      {/* <MarcasCarousel /> */}
       <MarcasCarousel />
       <Mapa />
       <Footer />
