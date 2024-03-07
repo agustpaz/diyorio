@@ -38,7 +38,6 @@ const Header = ({scrollToElement}) => {
                 logo.classList.remove('logo-chico');
                 nav.classList.remove('gradiente-nav');
                 logoEntero.classList.remove('trasladar-logo');
-                logoEntero.classList.remove('texto-chico-logo');
                 cambiarFontSizes(false, navLinks);
             }
         };
@@ -125,7 +124,7 @@ const Header = ({scrollToElement}) => {
             null
         )
     }
-    <nav id="navigation" className={`flex items-center justify-around text-2xl py-14 sm:px-10 sm:py-8 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"} wow fadeInDown`}>
+    <nav id="navigation" className={`flex items-center justify-around text-2xl py-2 sm:px-10 sm:py-2 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"} wow fadeInDown`}>
         <Link href="/" id="logo-entero" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter transition-all ease-in-out duration-500`} >
             <Image
                 id="imagen-logo"

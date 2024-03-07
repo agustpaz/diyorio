@@ -54,10 +54,6 @@ h4 {
   font-size: 2.8rem;
 }
 
-.texto-chico-logo {
-  font-size: 2rem !important;
-}
-
 .texto-chico {
   font-size: 1.5rem !important;
 }
@@ -169,13 +165,13 @@ h4 {
 }
 
 .logo-chico {
-  width: 75px;
+  width: 110px;
   transition: all .5s ease;
 }
 
 @media (min-width: 650px) {
   .logo-chico {
-    width: 50px;
+    width: 110px;
   }
 }
 
@@ -203,22 +199,6 @@ h4 {
   50% {
       border-color: transparent;
   }
-}
-
-.text-shadow-titulo {
-  text-shadow: 5px 3px 0px #9A9E84;
-}
-
-.text-shadow-titulo-resaltado {
-  text-shadow: none;
-}
-
-
-#separador-servicios {
-  background-image: url("/assets/images/separador-imagen.jpg");
-  background-position: 50% 40%;
-  background-attachment: fixed;
-  color: #7ca596;
 }
 
 /* POPUP */

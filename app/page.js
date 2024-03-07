@@ -34,10 +34,9 @@ export default function Home() {
     console.log(elementId)
     const element = document.getElementById(elementId);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      console.log(elementPosition);
+      const scrollY = element.getBoundingClientRect().top + window.scrollY - 80;;
       window.scrollTo({
-        top: elementPosition - 112,
+        top: scrollY,
         behavior: 'smooth'
       });
     }
