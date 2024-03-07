@@ -20,7 +20,7 @@ export async function POST(request) {
         });
     
         const mailOption = {
-            from: "mailervetpaz@gmail.com",
+            from: "diyorio@gmail.com",
             to: "colilo40@gmail.com",
             subject: `${asunto}`,
             html: `<h3>De:</h3><p ${estilosParrafos}>${nombre + " " + apellido}</p>
