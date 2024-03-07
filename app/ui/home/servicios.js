@@ -6,7 +6,7 @@ const Servicios = () => {
     <article className={`w-full relative z-20`} >
       <div className="w-full h-full grid lg:grid-cols-3 gap-16 p-20">
         <Link href={"/articulo/importacion"} target='blank'>
-          <div className={`card wow fadeInUp`} data-wow-duration="1s" data-wow-delay="1.2s">
+          <div className={`card wow fadeInUp`} data-wow-duration="1s" >
             <div className='w-full h-full flex justify-center items-center card-content'>
               <h3 className='titulo-card text-4xl font-normal tracking-wide text-center uppercase'>
                 Importacion
@@ -27,7 +27,7 @@ const Servicios = () => {
         </Link>
 
         <Link href={"/articulo/exportacion"} target='blank'>
-        <div className={`card wow fadeInUp`} data-wow-duration="1s" data-wow-delay="1.5s">
+        <div className={`card wow fadeInUp`} data-wow-duration="1.6s" >
           <div className={`w-full h-full flex justify-center items-center card-content`}>
             <h3 className='titulo-card text-4xl font-normal tracking-wide text-center uppercase'>
               Exportacion
@@ -48,7 +48,7 @@ const Servicios = () => {
         </Link>
 
         <Link href={"/articulo/especiales"} target='blank'>
-        <div className={`card wow fadeInUp`} data-wow-duration="1s" data-wow-delay="1.8s">
+        <div className={`card wow fadeInUp`} data-wow-duration="2.2s" >
           <div className='w-full h-full flex justify-center items-center card-content'>
             <h3 className='titulo-card text-4xl font-normal tracking-wide text-center uppercase'>
               Servicios Especiales
