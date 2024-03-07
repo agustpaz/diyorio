@@ -19,6 +19,8 @@ const useValidacion = (stateInicial, validar, func, setMensajePopup) => {
             if(noErrores) {
                 setCargando(true);
 
+                console.log(cargando);
+                
                 handlePopup();
             }
 
