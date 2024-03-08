@@ -6,7 +6,7 @@ import PopupContext from "@/context/popup-context";
 import Footer from './ui/home/footer';
 
 export const metadata = {
-  title: 'Diyorio',
+  title: '| Despachantes de Aduana',
   description: 'Diyorio, despachantes de aduana.',
 }
 
