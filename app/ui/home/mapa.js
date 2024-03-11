@@ -11,14 +11,15 @@ import "@/styles/mapa.css";
 
 const Mapa = () => {
   return (
-    <section className='pt-20 pb-24 px-10 sm:p-16 sm:pb-36 relative'>
+    <section className='pt-20 pb-24 px-10 sm:p-16 sm:pb-28 relative'>
         <div className='lg:grid lg:grid-cols-2 gap-x-10 wow fadeInRight'>
-            <div className='sm:px-24 sm:py-48 sm:shadow-2xl'>
-                <h1 className='text-5xl text-5xl xl:text-6xl font-semibold'>Donde encontrarnos</h1>
+            <div className='sm:px-24 sm:py-24 sm:shadow-2xl'>
+                <h1 className='text-3xl text-4xl xl:text-5xl font-semibold'>Donde encontrarnos</h1>
                 <div className='separador-texto bg-azul-cruzdelsur w-1/4 ml-2 mt-2 mb-20 h-1'></div>
-                <p className='mb-14 flex items-center justify-start gap-6 text-2xl md:text-3xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">location_on</span><a>Dorrego 446</a></p>
-                <p className='mb-14 flex items-center justify-start gap-6 text-2xl md:text-3xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">mail</span><a href="mailto:info@itzeta.com.ar">diyorio@despachantes.com</a></p>
-                <p className='mb-14 flex items-center justify-start gap-6 text-2xl md:text-3xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">call</span><a href="tel:+54 9 2234 55-4760">+54 223 5214743</a></p>
+                <p className='mb-14 flex items-center justify-start gap-6 text-xl md:text-2xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">location_on</span><a>Av. Buque Pesquero Dorrego 446</a></p>
+                <p className='mb-14 flex items-center justify-start gap-6 text-xl md:text-2xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">mail</span><a href="mailto:info@itzeta.com.ar">micaela@diyoriocomex.com</a></p>
+                <p className='mb-14 flex items-center justify-start gap-6 text-xl md:text-2xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">call</span><a href="tel:+54 9 2234 55-4760">+54 0223 5214743</a></p>
+                <p className='mb-14 flex items-center justify-start gap-6 text-xl md:text-2xl font-normal italic'><span className="material-icons iconos-mapa text-azul-cruzdelsur">phone_iphone</span><a href="tel:+54 9 2234 55-4760">+54 0223 480 1810</a></p>
             </div>
             <div className='shadow-2xl'>
                 <div id='mapa'>

@@ -1,4 +1,4 @@
-import { roboto, montserrat, noto } from '@/app/fonts'
+import { roboto, montserrat, noto, titillium } from '@/app/fonts'
 import './globals.css'
 import '@/styles/globals.css'
 import PopupContext from "@/context/popup-context";

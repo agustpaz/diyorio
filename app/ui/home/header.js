@@ -12,7 +12,9 @@ import { usePathname } from 'next/navigation'
 import 'animate.css/animate.min.css';
 
 import homeStyles from "./home.module.css";
-import { noto } from "@/app/fonts";
+import { titillium } from "@/app/fonts";
+
+import Slider from "./slider";
 
 const Header = ({scrollToElement}) => {
 
@@ -21,23 +23,16 @@ const Header = ({scrollToElement}) => {
 
   useEffect(() => {
       const nav = document.querySelector('#navigation');
-      const logo = document.querySelector('#imagen-logo');
       const navLinks = document.querySelectorAll("#navigation a");
       const main = document.getElementById("main");
-      const logoEntero = document.getElementById("logo-entero");
     
       if(currentPage == "/") {
         const handleScroll = () => {
             if (window.scrollY > 150) {
-                logo.classList.add('logo-chico');
                 nav.classList.add('gradiente-nav');
-                logoEntero.classList.add('trasladar-logo');
-                logoEntero.classList.add('texto-chico-logo');
                 cambiarFontSizes(true, navLinks);
             } else {
-                logo.classList.remove('logo-chico');
                 nav.classList.remove('gradiente-nav');
-                logoEntero.classList.remove('trasladar-logo');
                 cambiarFontSizes(false, navLinks);
             }
         };
@@ -94,11 +89,11 @@ const Header = ({scrollToElement}) => {
     {currentPage == "/" ? (
         <>
         <div className="filtro">
-            <div className="flex items-center gap-28 justify-center mt-48">
+            <div className="flex items-center gap-28 justify-center mt-40">
                 <div className="font-bold tracking-widest wow fadeInUp">
-                  <div className={noto.className}>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">Nos hacemos cargo</h2>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold mb-12 text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">de tus pedidos</h2>
+                  <div>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal mb-12 text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s"> del comercio exterior</h2>
                   </div>
                   <div className="flex justify-center p-6">
                     <Link href="/contacto" target="blank">
@@ -119,26 +114,30 @@ const Header = ({scrollToElement}) => {
             </div>
         </div>
         <div id="main">
-            
+            <Slider />
         </div></> ) : (
             null
         )
     }
-    <nav id="navigation" className={`flex items-center justify-around text-2xl py-2 sm:px-10 sm:py-2 inset-x-0 top-0 w-full text-white transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90 texto-chico"} wow fadeInDown`}>
-        <Link href="/" id="logo-entero" className={`flex items-center ${currentPage == "/" ? "text-2xl sm:text-5xl" : "text-2xl"} font-inter transition-all ease-in-out duration-500`} >
-            <Image
-                id="imagen-logo"
-                src={logoDiyorio}
-                alt="Promptopia Logo"
-                className={`object-contain my-3 logo animated ${currentPage.includes("/articulo") ? "logo-chico" : ""}`}
-                width={110}
-                priority
-            />
-            <span>I YORIO</span>
+    <nav id="navigation" className={`flex items-center justify-between text-xl py-2 px-10 sm:px-28 sm:py-2 inset-x-0 top-0 w-full ${titillium.className} uppercase text-white font-semibold transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90"} wow fadeInDown`}>
+        <Link href="/" id="logo-entero">
+            <div className="flex flex-col justify-center">
+                <Image
+                    id="imagen-logo"
+                    src={logoDiyorio}
+                    alt="Promptopia Logo"
+                    className={`ml-20 mt-3 animated logo`}
+                    priority
+                />
+                <div>
+                    <div id="diyorio" className="-mt-4 text-center text-3xl sm:text-5xl font-inter font-extrabold transition-all ease-in-out duration-500">DI YORIO</div>
+                    <div id="despachantes" className="-mt-6 text-center text-lg font-inter font-normal transition-all ease-in-out duration-500">Despachantes de Aduana</div>
+                </div>
+            </div>
         </Link>
 
 
-        <div className="sm:flex space-x-4 hidden tracking-wider">
+        <div className="sm:flex space-x-4 hidden tracking-widest">
           <div className="flex gap-3 md:gap-5">
             <Link 
                 href="/"
@@ -149,7 +148,7 @@ const Header = ({scrollToElement}) => {
 
             {currentPage === "/" ? (
             <Link 
-                onClick={() => scrollToElement('quienes-somos')}
+                onClick={(e) => scrollToElement(e,'quienes-somos')}
                 href={""}
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
@@ -166,7 +165,7 @@ const Header = ({scrollToElement}) => {
 
             {currentPage === "/" ? (
             <Link 
-                onClick={() => scrollToElement('despachantes-servicios')}
+                onClick={(e) => scrollToElement(e,'despachantes-servicios')}
                 href={""}
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
@@ -183,7 +182,7 @@ const Header = ({scrollToElement}) => {
             
             {currentPage === "/" ? (
             <Link 
-                onClick={() => scrollToElement('nuestros-clientes')}
+                onClick={(e) => scrollToElement(e,'nuestros-clientes')}
                 href={""}
                 className="hover:bg-azul-cruzdelsur transition-all ease-in-out duration-500 p-4 py-10 scroll-link"
             >
@@ -219,28 +218,57 @@ const Header = ({scrollToElement}) => {
                             Inicio
                         </Link>
 
+
+                        {currentPage === "/" ? (
                         <Link 
-                            href={currentPage == "/" ? "#quienes-somos" : "/#quienes-somos"}
+                            onClick={(e) => scrollToElement(e,'quienes-somos')}
+                            href={""}
                             className="dropdown_link text-black"
-                            onClick={() => setToggleDropdown(false)}
                         >
                             Nosotros
                         </Link>
-
+                        ) : (
                         <Link 
-                            href={currentPage == "/" ? "#nuestros-clientes" : "/#nuestros-clientes"}
+                            href="/#quienes-somos"
                             className="dropdown_link text-black"
-                            onClick={() => setToggleDropdown(false)}
                         >
-                            Nuestros Clientes
+                            Nosotros
                         </Link>
-
+                        )}
+                        
+                        {currentPage === "/" ? (
                         <Link 
-                            href={currentPage == "/" ? "#despachantes-servicios" : "/#despachantes-servicios"}
+                            onClick={(e) => scrollToElement(e,'despachantes-servicios')}
+                            href={""}
                             className="dropdown_link text-black"
                         >
                             Servicios
                         </Link>
+                        ) : (
+                        <Link 
+                            href="/#despachantes-servicios"
+                            className="dropdown_link text-black"
+                        >
+                            Servicios
+                        </Link>
+                        )}
+
+                        {currentPage === "/" ? (
+                        <Link 
+                            onClick={(e) => scrollToElement(e,'nuestros-clientes')}
+                            href={""}
+                            className="dropdown_link text-black"
+                        >
+                            Nuestros Clientes
+                        </Link>
+                        ) : (
+                        <Link 
+                            href="/#nuestros-clientes"
+                            className="dropdown_link text-black"
+                        >
+                            Nuestros Clientes
+                        </Link>
+                        )}
                         
                         <Link 
                             href="/contacto"

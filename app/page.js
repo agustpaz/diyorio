@@ -17,6 +17,7 @@ export default function Home() {
 
 
   useEffect(() => {
+    
     if (typeof window !== 'undefined') {
       // Solo inicializa Wow.js en el navegador
       const WOW = require('wowjs');
@@ -30,8 +31,8 @@ export default function Home() {
 
   },[]);
 
-  const scrollToElement = (elementId) => {
-    console.log(elementId)
+  const scrollToElement = (e, elementId) => {
+    e.preventDefault();
     const element = document.getElementById(elementId);
     if (element) {
       const scrollY = element.getBoundingClientRect().top + window.scrollY - 80;;
