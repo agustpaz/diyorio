@@ -89,11 +89,11 @@ const Header = ({scrollToElement}) => {
     {currentPage == "/" ? (
         <>
         <div className="filtro">
-            <div className="flex items-center gap-28 justify-center sm:mt-40">
+            <div className="flex items-center gap-28 justify-center mt-40">
                 <div className="font-bold tracking-widest wow fadeInUp">
                   <div>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal mb-12 text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s"> del comercio exterior</h2>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal mb-12 text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s"> del comercio exterior</h2>
                   </div>
                   <div className="flex justify-center p-6">
                     <Link href="/contacto" target="blank">
