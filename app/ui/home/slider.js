@@ -16,7 +16,7 @@ const Slider = () => {
 
         const slider = new Glide(".glide", {
             type: 'carousel',
-            autoplay: 4000
+            autoplay: 3000
         }).mount({ Autoplay });
         
     });
