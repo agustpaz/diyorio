@@ -107,7 +107,7 @@ const Header = ({scrollToElement}) => {
                             behavior: "smooth"
                         })
                     }}>
-                        <Image src={flechaAbajo} alt="Ir abajo" width="30px" height="30px" title="Ir Abajo" className="cursor-pointer"/>
+                        <Image src={flechaAbajo} alt="Ir abajo" width="30px" height="30px" title="Ir Abajo" className="cursor-pointer transition-all duration-200 hover:scale-105"/>
                     </div>
                   </div>
                 </div>

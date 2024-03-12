@@ -28,15 +28,15 @@ const Mapa = () => {
             </div>
         </div>
         <div className='absolute bottom-2'>
-            <div className="w-24 mx-auto mt-8">
-                <div onClick={() => {
+            <div className="w-24 mx-auto mt-8 p-6 transition-all ease-in-out duration-200 bg-gray-200 hover:bg-gray-300 hover:scale-105 rounded-full cursor-pointer"
+                onClick={() => {
                     window.scrollTo({
                         left: 0,
                         top: 0
                     })
-                }}>
-                    <Image src={flecha} alt="Ir abajo" width="30px" height="30px" title="Ir Arriba" className="cursor-pointer rotate-180"/>
-                </div>
+                }}    
+            >
+                <Image src={flecha} alt="Ir abajo" width="30px" height="30px" title="Ir Arriba" className="rotate-180"/>
             </div>
         </div>
     </section>

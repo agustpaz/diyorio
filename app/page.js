@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Header from './ui/home/header'
 import Despachantes from './ui/home/despachantes'
@@ -9,12 +9,14 @@ import Nosotros from './ui/home/nosotros'
 import QuienesSomos from './ui/home/quienes-somos.js'
 import Mapa from './ui/home/mapa'
 import Footer from './ui/home/footer'
+import Loader from './ui/loader'
 
 import "@/styles/animate.css";
 import "@/styles/animate.min.css";
 
 export default function Home() {
 
+  const [ isLoading, setLoading ] = useState(true);
 
   useEffect(() => {
     
@@ -28,6 +30,10 @@ export default function Home() {
 
       wow.sync();
     }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
   },[]);
 
@@ -45,6 +51,7 @@ export default function Home() {
 
   return (
     <>
+      <Loader isLoading={isLoading}/>
       <Header scrollToElement={scrollToElement} />
       <Nosotros />
       <QuienesSomos />
