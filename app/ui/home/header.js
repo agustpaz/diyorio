@@ -89,7 +89,7 @@ const Header = ({scrollToElement}) => {
     {currentPage == "/" ? (
         <>
         <div className="filtro">
-            <div className="flex items-center gap-28 justify-center mt-40">
+            <div className="flex items-center gap-28 justify-center sm:mt-40">
                 <div className="font-bold tracking-widest wow fadeInUp">
                   <div>
                     <h2 className={`${homeStyles.titulo_con_sombra} text-4xl md:text-5xl font-semibold leading-normal text-white titulo text-center`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
@@ -126,16 +126,15 @@ const Header = ({scrollToElement}) => {
                     id="imagen-logo"
                     src={logoDiyorio}
                     alt="Promptopia Logo"
-                    className={`ml-20 mt-3 animated logo`}
+                    className={`ml-16 sm:ml-20 mt-3 animated logo`}
                     priority
                 />
                 <div>
-                    <div id="diyorio" className="-mt-4 text-center text-3xl sm:text-5xl font-inter font-extrabold transition-all ease-in-out duration-500">DI YORIO</div>
+                    <div id="diyorio" className="-mt-3 sm:-mt-4 text-center text-4xl sm:text-5xl font-inter font-extrabold transition-all ease-in-out duration-500">DI YORIO</div>
                     <div id="despachantes" className="-mt-6 text-center text-lg font-inter font-normal transition-all ease-in-out duration-500">Despachantes de Aduana</div>
                 </div>
             </div>
         </Link>
-
 
         <div className="sm:flex space-x-4 hidden tracking-widest">
           <div className="flex gap-3 md:gap-5">
