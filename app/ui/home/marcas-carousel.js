@@ -58,16 +58,14 @@ const MarcasCarousel = () => {
             <li className='brand-logo bg-black p-2 rounded'><Image src={bellini} alt='Bellini'/></li>
             <li className='brand-logo'>Liya S.A</li>
             <li className='brand-logo bg-blue-200 p-2 rounded'><Image src={buenaVista} alt='Bellini'/></li>
-            <li className='brand-logo bg-verde-parque px-2'><Image src={parquepapas} alt='Parque papas'/></li>
             <li className='brand-logo'>PESQUERA DEL ESTE S.A.</li>
+            <li className='brand-logo bg-verde-parque px-2'><Image src={parquepapas} alt='Parque papas'/></li>
             <li className='brand-logo'><Image src={valiparri} alt='Valiparri'/></li>
             <li className='brand-logo'>PESQUERA BUENA VISTA S.A.</li>
             <li className='brand-logo p-5'><Image src={traweluwn} alt='Traweluwn'/></li>
             <li className='brand-logo'>Fenix International</li>
             <li className='brand-logo bg-blue-200 p-2 rounded'><Image src={moscuzza} alt='Moscuzza'/></li>
-            <li className='brand-logo'>CLFLYING S.A. /</li>
             <li className='brand-logo bg-azul-cruzdelsur px-2'><Image src={cruzdelsur} alt='Cruz del Sur'/></li>
-            <li className='brand-logo'>Kiefernwald S.A</li>
           </ul>
           <div className='filtro-slider' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} data-slider="slider-marcas-1"></div>
         </div>
