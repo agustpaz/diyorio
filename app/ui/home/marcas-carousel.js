@@ -89,7 +89,7 @@ const MarcasCarousel = () => {
             <li className='brand-logo p-5'><Image src={nuevoRumbo} alt='Cooperativa Nuevo Rumbo'/></li>
             <li className='brand-logo p-16'><Image src={mineo} alt='Mineo'/></li>
             <li className='brand-logo'>Isola Verde S.A.</li>
-            <li className='brand-logo p-5'><Image src={grupoFenix} alt='Grupo Fenix'/></li>
+            <li className='brand-logo bg-gray-400 p-5'><Image src={grupoFenix} alt='Grupo Fenix'/></li>
             <li className='brand-logo bg-blue-200 p-2 rounded'><Image src={moscuzza} alt='Moscuzza'/></li>
             <li className='brand-logo bg-azul-cruzdelsur px-2'><Image src={cruzdelsur} alt='Cruz del Sur'/></li>
             <li className='brand-logo'>Grupo Mattera</li>
