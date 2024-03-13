@@ -10,10 +10,10 @@ const QuienesSomos = () => {
             <div className='separador-texto bg-verde-400 w-1/4 mx-auto mt-3 h-1'></div>
             <div className='mt-16'>
                 <p className='text-2xl sm:text-3xl text-center'>
-                    Somos una empresa familiar, cuatro generaciones con más de 57 años de experiencia asesorando y gestionando operaciones de comercio exterior. Ofrecemos una atención personalizada acorde a los
-                    requerimientos y modalidades de nuestros clientes. Todas nuestras gestiones están respaldadas por un
-                    excelente equipo de profesionales altamente
-                    capacitados.
+                    Somos una empresa familiar, cuatro generaciones con más de 60 años de experiencia asesorando y gestionando operaciones de comercio exterior.
+                </p>
+                <p className='text-2xl sm:text-3xl text-center'>
+                    Ofrecemos una atención personalizada acorde a los requerimientos y modalidades de nuestros clientes. 
                 </p>
             </div>
         </div>
@@ -24,13 +24,10 @@ const QuienesSomos = () => {
             <div className='separador-texto bg-verde-400 w-1/4 mx-auto mt-3 h-1'></div> */}
             <div>
                 <p className='text-2xl sm:text-3xl text-center'>
-                    Nuestra vasta experiencia garantiza una ágil
-                    coordinación con los organizamos que intervienen
-                    en la actividad, optimizando de esta manera nuestro
-                    servicios y posicionándonos como uno de los
-                    lideres en el mercado.
-                    Contamos con representantes en las principales 
-                    Aduanas, facilitando la operativa desde cualquier punto del país.
+                    Todas nuestras gestiones están respaldadas por un excelente equipo de profesionales altamente capacitados, su vasta experiencia garantiza una ágil coordinación con los organizamos que intervienen en la actividad, optimizando de esta manera nuestro servicios y posicionándonos como uno de los lideres en el mercado.
+                </p>
+                <p className='text-2xl sm:text-3xl text-center'>
+                Contamos con representantes en las principales Aduanas, facilitando la operativa desde cualquier punto del país.
                 </p>
             </div>
         </div>
