@@ -7,9 +7,9 @@ const Nosotros = () => {
     <section id='contenedor-nosotros'>
       <div className='contenedor-contenido'>
         <div className='caja-contenido sm:w-3/4 flex justify-center items-center'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-inter font-medium tracking-wide'>
-            <span className='wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.2s">Somos una empresa dedicada a la gestión profesional aduanera para la </span>
-            <span className='text-azul-cruzdelsur wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">importación y exportación de productos</span>
+          <h1 className='text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-inter font-medium tracking-wide'>
+            <span className='wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.2s">Nuestra solida presencia en los procesos del comercio exterior </span>
+            <span className='text-azul-cruzdelsur wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">garantizan eficacia y agilidad</span>
           </h1>
         </div>
       </div>

@@ -8,9 +8,9 @@ const Despachantes = () => {
   return (
     <section id='despachantes-servicios' className={`${homeStyles.servicios_background} relative py-24 wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
         <div className='px-20 pt-8 relative z-20'>
-          <div id="contenido" className='mx-auto wow fadeInUp' data-wow-duration="1s" data-wow-delay="1s">
-            <h1 className={`${homeStyles.titulo_con_sombra} text-2xl sm:text-5xl tracking-wide text-white titulo font-normal text-center`}><span className=''>Somos despachantes</span> de Aduana</h1>
-            <h1 className={`${homeStyles.titulo_con_sombra} text-2xl sm:text-5xl tracking-wide text-white titulo font-bold text-center`}><span className=''>y nos apasiona nuestra profesión</span></h1>
+          <div id="contenido" className='mx-auto wow'>
+            <h1 className={`${homeStyles.titulo_con_sombra} text-2.5xl sm:text-6xl lg:text-8xl tracking-wide text-white titulo font-normal text-center`}><span className=''>Somos despachantes</span> de Aduana</h1>
+            <h1 className={`${homeStyles.titulo_con_sombra} text-2.5xl sm:text-6xl lg:text-8xl tracking-wide text-white titulo font-bold text-center`}><span className=''>y nos apasiona nuestra profesión</span></h1>
           </div>
         </div>
         <Servicios />

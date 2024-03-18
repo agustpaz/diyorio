@@ -256,7 +256,7 @@ h4 {
   justify-content: space-between;
   color: black;
   height: 400px;
-  padding: 35px;
+  padding: 10px;
   /* border: 1px solid rgba(255, 255, 255, .25); */
   /* border-radius: 20px; */
   background-color: rgba(255, 255, 255, 1);
@@ -266,6 +266,12 @@ h4 {
   overflow: hidden;
   transition: all ease-in-out .3s;
   cursor: pointer;
+}
+
+@media (min-width: 380px) {
+  .card {
+    padding: 0px;
+  }
 }
 
 .card:hover {
