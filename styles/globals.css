@@ -112,6 +112,15 @@ h4 {
   }
 }
 
+article svg {
+  fill: #7f9fb0;
+}
+
+#quienes-somos svg {
+  fill: #ffffff;
+}
+
+
 /* Slider */
 
 #galeria {
