@@ -91,7 +91,7 @@ const Header = ({scrollToElement}) => {
     {currentPage == "/" ? (
         <>
         <div className="filtro">
-            <div className={`flex items-center gap-28 justify-center ${innerHeight > '650' ? 'mt-80' : 'mt-40'} mt-`}>
+            <div className={`flex items-center gap-28 justify-center ${innerHeight > 650 ? 'mt-80' : 'mt-40'} mt-`}>
                 <div className="font-bold tracking-widest wow fadeInUp">
                   <div>
                     <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal text-white titulo text-center uppercase`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
