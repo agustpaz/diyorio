@@ -30,7 +30,7 @@ const Page = () => {
         <Loader isLoading={isLoading}/>
         <Header />
         <Articulo 
-            titulo={"Mi titulo"}
+            titulo={"Importación"}
             lista={lista}
             imagen={imagen}
         />

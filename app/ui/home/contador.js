@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function Contador({ initialValue, targetValue, leyenda, milisegundos, id }) {
+function Contador({ initialValue, targetValue, leyenda, milisegundos, id, porcentaje = false }) {
   const [isVisible, setIsVisible] = useState(false);
   const [counter, setCounter] = useState(initialValue);
 
@@ -39,8 +39,8 @@ function Contador({ initialValue, targetValue, leyenda, milisegundos, id }) {
 
   return (
     <div className='p-8' id={id}>
-        <p id="valor-experiencia" className='flex justify-center text-15xl text-white'>{counter}</p>
-        <h2 className='text-2xl text-white text-center'>{leyenda}</h2>
+        <p id="valor-experiencia" className='flex justify-center text-10xl sm:text-15xl text-white'>{counter}{porcentaje == true ? '%' : ''}</p>
+        <h2 className='text-xl sm:text-2xl text-white text-center'>{leyenda}</h2>
     </div>
   );
 }
