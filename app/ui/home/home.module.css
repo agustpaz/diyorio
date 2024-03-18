@@ -70,7 +70,7 @@
 
 
 .image_despachantes {
-    filter: blur(0px);
+    filter: blur(1px);
     background-image: url('/assets/images/puerto-mardel.jpg');
     background-size: cover;
     background-position: center;
@@ -79,12 +79,14 @@
 }
 
 .imagen_puerto {
-    min-height: 300px;
+    min-height: 400px;
+    max-height: 500px;
     background-image: url('/assets/images/puerto-arriba.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    box-shadow: 0px 0px 5px #000000;
 }
 
 @media (min-width: 650) {
