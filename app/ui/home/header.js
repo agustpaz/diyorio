@@ -20,12 +20,13 @@ const Header = ({scrollToElement}) => {
 
   const currentPage = usePathname();
   const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [innerHeight, setInnerHeight] = useState(0);
 
   useEffect(() => {
       const nav = document.querySelector('#navigation');
       const navLinks = document.querySelectorAll("#navigation a");
       const main = document.getElementById("main");
-      const innerHeight = window.innerHeight;
+      setInnerHeight(window.innerHeight);
     
       if(currentPage == "/") {
         const handleScroll = () => {
