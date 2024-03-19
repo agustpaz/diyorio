@@ -91,11 +91,11 @@ const Header = ({scrollToElement}) => {
     {currentPage == "/" ? (
         <>
         <div className="filtro">
-            <div className={`flex items-center gap-28 justify-center ${innerHeight > 650 ? 'mt-80' : 'mt-40'} mt-`}>
-                <div className="font-bold tracking-widest wow fadeInUp">
+            <div className={`flex items-center gap-28 justify-center ${innerHeight > 650 ? 'mt-80' : 'mt-40'}`}>
+                <div className="font-bold tracking-widest">
                   <div>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal text-white titulo text-center uppercase`} data-wow-duration="0.5s" data-wow-delay="0.2s">La experiencia al servicio</h2>
-                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal mb-12 text-white titulo text-center uppercase`} data-wow-duration="0.5s" data-wow-delay="0.2s"> del comercio exterior</h2>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal text-white titulo text-center uppercase`}>La experiencia al servicio</h2>
+                    <h2 className={`${homeStyles.titulo_con_sombra} text-5xl font-semibold leading-normal mb-12 text-white titulo text-center uppercase`}> del comercio exterior</h2>
                   </div>
                   <div className="flex justify-center p-6">
                     <Link href="/contacto" target="blank">
@@ -121,7 +121,7 @@ const Header = ({scrollToElement}) => {
             null
         )
     }
-    <nav id="navigation" className={`flex items-center justify-between text-xl py-2 px-10 sm:px-28 sm:py-2 inset-x-0 top-0 w-full ${titillium.className} uppercase text-white font-semibold transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90"} wow fadeInDown`}>
+    <nav id="navigation" className={`flex items-center justify-between text-xl py-2 px-10 sm:px-28 sm:py-2 inset-x-0 top-0 w-full ${titillium.className} uppercase text-white font-semibold transition-all ease-in-out duration-300 ${currentPage == "/" ? "fixed" : "bg-black/90"}`}>
         <Link href="/" id="logo-entero">
             <div className="flex flex-col justify-center">
                 <Image

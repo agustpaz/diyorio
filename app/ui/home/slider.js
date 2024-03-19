@@ -16,30 +16,30 @@ const Slider = () => {
 
         const slider = new Glide(".glide", {
             type: 'carousel',
-            autoplay: 3000
+            autoplay: 5000
         }).mount({ Autoplay });
         
     });
     
     return (
-        <section id="galeria" className='h-full w-full'>
+        <section id="galeria">
             <div className="glide">
                 <div className="glide__track" data-glide-el="track">
                     <ul className="glide__slides">
                         <li className="glide__slide">
-                            <Image width={1000} height={1000} src={contenedores} loading="lazy" className="imagen-slider" alt='Contenedores'/>
+                            <Image width={1000} height={1000} src={contenedores} loading="lazy" alt='Contenedores'/>
                         </li>
                         <li className="glide__slide">
-                            <Image width={1000} height={1000} src={barcoExportacion} loading="lazy" className="imagen-slider" alt='Barco de exportacion'/>
+                            <Image width={1000} height={1000} src={barcoExportacion} loading="lazy" alt='Barco de exportacion'/>
                         </li>
                         <li className="glide__slide">
-                            <Image width={1000} height={1000} src={contenedores2} loading="lazy" className="imagen-slider" alt='Contenedores Maersk'/>
+                            <Image width={1000} height={1000} src={contenedores2} loading="lazy" alt='Contenedores Maersk'/>
                         </li>
                         <li className="glide__slide">
-                            <Image width={1000} height={1000} src={barcoMar} loading="lazy" className="imagen-slider" alt='Barco de contenedores en el mar'/>
+                            <Image width={1000} height={1000} src={barcoMar} loading="lazy" alt='Barco de contenedores en el mar'/>
                         </li>
                         <li className="glide__slide">
-                            <Image width={1000} height={1000} src={contenedores3} loading="lazy" className="imagen-slider" alt='Contenedores en Aduana'/>
+                            <Image width={1000} height={1000} src={contenedores3} loading="lazy" alt='Contenedores en Aduana'/>
                         </li>
                     </ul>
                 </div>

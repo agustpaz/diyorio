@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { PopupContext } from '@/context/popup-context';
 
+import "@/styles/popup.css";
+
 const Popup = ({mensaje}) => {
 
     const { estadoPopup, setEstadoPopup } = useContext(PopupContext);
