@@ -61,37 +61,37 @@ const MarcasCarousel = () => {
         <h1 className='text-center text-5xl font-bold mb-20 wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.5s">Nuestros Clientes <div className='separador-texto bg-verde-400 m-auto w-48 h-2'></div></h1>
         <div className='slider wow fadeInUp' data-wow-duration="1s" data-wow-delay="0.8s">
           <ul id='slider-marcas-1' className='brands'>
-            <li className='brand-logo px-2'><Image src={mardi} alt='Mardi S.A.'/></li>
+            <li className='brand-logo px-2'><img src="/assets/images/marcas-logos/avif/mardi.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Mardi S.A.'/></li>
             <li className='brand-logo'>Ledipa Mare S.A</li>
-            <li className='brand-logo'><Image src={brewHouse} alt='Brew House'/></li>
-            <li className='brand-logo px-2'><Image src={marPicado} alt='Mar Picado S.A.'/></li>
+            <li className='brand-logo'><img src="/assets/images/marcas-logos/brew-house.png" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Brew House'/></li>
+            <li className='brand-logo px-2'><img src="/assets/images/marcas-logos/avif/mar-picado.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Mar Picado S.A.'/></li>
             <li className='brand-logo px-2'><Image src={asaparri} alt='Asaparri'/></li>
             <li className='brand-logo'>Pesquera Mar Chiquita S.A</li>
-            <li className='brand-logo'><div><Image src={goodfish} alt='Good Fish'/></div></li>
+            <li className='brand-logo'><div><img src="/assets/images/marcas-logos/avif/good-fish.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Good Fish'/></div></li>
             <li className='brand-logo p-5'><Image src={fishingGround} alt='Fishing Ground'/></li>
-            <li className='brand-logo p-5'><Image src={santaMaria} alt='Fishing Ground'/></li>
+            <li className='brand-logo p-5'><Image src={santaMaria} alt='Santa Maria'/></li>
             <li className='brand-logo'>Congeladores Patagónicos S.A.</li>
-            <li className='brand-logo p-5'><Image src={patagoniaFishing} alt='Patagonia Fishing'/></li>
+            <li className='brand-logo p-5'><img src="/assets/images/marcas-logos/avif/patagonia-fishing.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Patagonia Fishing'/></li>
             <li className='brand-logo bg-blue-800 p-2 rounded'><Image src={mariscosa} alt='Mariscos S.A'/></li>
             <li className='brand-logo'>Taturiello S.A</li>
-            <li className='brand-logo bg-black p-2 rounded'><Image src={bellini} alt='Bellini'/></li>
-            <li className='brand-logo bg-gray-400 p-2 rounded'><Image src={tecnopesca} alt='Tecnopesca'/></li>
-            <li className='brand-logo bg-gray-400 p-2 rounded'><Image src={elDelfin} alt='Rafael Cioffi e hijos S.A.'/></li>
+            <li className='brand-logo bg-black p-2 rounded'><img src="/assets/images/marcas-logos/avif/bellini.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Bellini'/></li>
+            <li className='brand-logo bg-gray-400 p-2 rounded'><img src="/assets/images/marcas-logos/avif/tecnopesca.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Tecnopesca'/></li>
+            <li className='brand-logo bg-gray-400 p-2 rounded'><img src="/assets/images/marcas-logos/avif/el-delfin.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Rafael Cioffi e hijos S.A.'/></li>
             <li className='brand-logo'>Liya S.A</li>
-            <li className='brand-logo bg-black p-2 rounded'><Image src={buenaVista} alt='Buena Vista'/></li>
+            <li className='brand-logo bg-black p-2 rounded'><img src="/assets/images/marcas-logos/avif/buena-vista.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Buena Vista'/></li>
             <li className='brand-logo bg-black p-2 rounded'><Image src={deliciasMarinas} alt='Delicias Marinas'/></li>
             <li className='brand-logo'>PESQUERA DEL ESTE S.A.</li>
             <li className='brand-logo bg-verde-parque px-2'><Image src={parquepapas} alt='Parque Papas'/></li>
-            <li className='brand-logo'><Image src={valiparri} alt='Valiparri'/></li>
-            <li className='brand-logo'><Image src={moscuzzaRedes} alt='Moscuzza'/></li>
+            <li className='brand-logo'><img src="/assets/images/marcas-logos/avif/valiparri.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Valiparri'/></li>
+            <li className='brand-logo'><img src="/assets/images/marcas-logos/avif/moscuzza-redes.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Moscuzza'/></li>
             <li className='brand-logo'>PESQUERA BUENA VISTA S.A.</li>
-            <li className='brand-logo p-5'><Image src={traweluwn} alt='Traweluwn'/></li>
-            <li className='brand-logo p-5'><Image src={nuevoRumbo} alt='Cooperativa Nuevo Rumbo'/></li>
+            <li className='brand-logo p-5'><img src="/assets/images/marcas-logos/avif/traweluwn.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Traweluwn'/></li>
+            <li className='brand-logo p-5'><img src="/assets/images/marcas-logos/avif/nuevo-rumbo.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Cooperativa Nuevo Rumbo'/></li>
             <li className='brand-logo p-16'><Image src={mineo} alt='Mineo'/></li>
             <li className='brand-logo'>Isola Verde S.A.</li>
-            <li className='brand-logo p-5'><Image src={grupoFenix} alt='Grupo Fenix'/></li>
-            <li className='brand-logo bg-blue-200 p-2 rounded'><Image src={moscuzza} alt='Moscuzza'/></li>
-            <li className='brand-logo bg-azul-cruzdelsur px-2'><Image src={cruzdelsur} alt='Cruz del Sur'/></li>
+            <li className='brand-logo p-5'><img src="/assets/images/marcas-logos/avif/grupo-fenix.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Grupo Fenix'/></li>
+            <li className='brand-logo bg-blue-200 p-2 rounded'><img src="/assets/images/marcas-logos/moscuzza.svg" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Moscuzza'/></li>
+            <li className='brand-logo bg-azul-cruzdelsur px-2'><img src="/assets/images/marcas-logos/avif/cruz-del-sur.avif" loading='lazy' width="900px" height="900px" decoding='async' data-nimg="1" style={{color: "transparent"}} alt='Cruz del Sur'/></li>
             <li className='brand-logo'>Grupo Mattera</li>
           </ul>
           <div className='filtro-slider' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} data-slider="slider-marcas-1"></div>
